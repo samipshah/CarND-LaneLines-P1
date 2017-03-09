@@ -49,8 +49,8 @@ My pipeline consists of 6 steps. First I convert an image into gray scale and us
 
 ###2. Identify potential shortcomings with your current pipeline
 
-I see many potential shortcomings. Currently for some reason I do not have very stable right line, it seems to be continuously jittery on a video. Issues seems to be more with right line only. Other shortcoming I see is it would not extrapolate line when the road is turning like in extra.mp4. It is also slow. Walltime it takes is more like 5 seconds for white.mp4 and around 15-18 seconds for yellow.mp4. 
+Current shortcoming I see is smoothness frame over frame. Mainly because slope is calculated in every frame and slope differences makes it a bit jittery
 
 ###3. Suggest possible improvements to your pipeline
 
-I require better extrapolation logic to support curved road. Use some api to draw line and then arc for turning road. I need to remove region of interest related logic applied two times. 
+If some how smoothening can be applied so that slope changes are not abrupt but changes gradually, it would reduce jittery
